@@ -52,11 +52,11 @@ class Transcoder implements TranscoderInterface
         
         $transcoders = [];
         
-        try {
-            $transcoders[] = new MbTranscoder($defaultEncoding);
-        } catch (ExtensionMissingException $mb) {
-            // Ignore missing mbstring extension; fall back to iconv
-        }
+//        try {
+//            $transcoders[] = new MbTranscoder($defaultEncoding);
+//        } catch (ExtensionMissingException $mb) {
+//            // Ignore missing mbstring extension; fall back to iconv
+//        }
 
         try {
             $transcoders[] = new IconvTranscoder($defaultEncoding);
